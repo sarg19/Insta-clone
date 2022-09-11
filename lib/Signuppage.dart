@@ -51,7 +51,6 @@ class _SignUpState extends State<SignUp> {
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 80.0, vertical: 10.0),
-                // child: Image(image: AssetImage('assets/images/instalog.png')),
                 child: Text(
                   'Instagram',
                   style: TextStyle(
