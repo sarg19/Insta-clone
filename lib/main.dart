@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:insta_clone/Homepage.dart';
 import 'package:insta_clone/Loginpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:insta_clone/firebase_options.dart';
@@ -9,6 +11,14 @@ import 'app.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
+  // final user = FirebaseAuth.instance.currentUser;
+
+  // if(user != null){
+  //   runApp(const App());
+  // }
+  // else{
+  //   runApp(const HomePage());
+  // }
   runApp(const App());
 }
 

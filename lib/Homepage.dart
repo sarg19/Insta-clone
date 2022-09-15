@@ -19,61 +19,74 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: BottomNavigationBar(items: [
-          BottomNavigationBarItem(
-              icon: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.home,
-                    color: Colors.black,
-                    size: 35.0,
-                  )),
-              label: ''),
-          BottomNavigationBarItem(
-            icon: IconButton(
-              icon: Icon(
-                Icons.search,
-                color: Colors.black,
-                size: 35.0,
+        bottomNavigationBar: SizedBox(
+          // height: 78,
+          child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
+            // iconSize: 20,
+            items: [
+              BottomNavigationBarItem(
+                icon: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.home,
+                      color: Colors.black,
+                      size: 30.0,
+                    )),
+                label: ''
               ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const ExplorePage()),
-                );
-              },
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.add_box_outlined,
-                color: Colors.black,
-                size: 35.0,
-              ),
-              label: ''),
-          BottomNavigationBarItem(
+              BottomNavigationBarItem(
               icon: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.favorite_outline_outlined,
-                    color: Colors.black,
-                  )),
-              label: ''),
-          BottomNavigationBarItem(
-              icon: GestureDetector(
-                child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/Mypfp.jpg')),
-                onTap: () {
+                icon: Icon(
+                  Icons.search,
+                  color: Colors.black,
+                  size: 30.0,
+                ),
+                onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const ProfilePage()),
+                    MaterialPageRoute(builder: (context) => const ExplorePage()),
                   );
                 },
               ),
-              label: '')
-        ]),
+                label: '',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.add_box_outlined,
+                  color: Colors.black,
+                  size: 30.0,
+                ),
+                label: ''
+              ),
+              BottomNavigationBarItem(
+                icon: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.favorite_outline_outlined,
+                      color: Colors.black,
+                      size: 30.0,
+                    )),
+                label: ''
+              ),
+              BottomNavigationBarItem(
+                icon: GestureDetector(
+                  child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/Mypfp.jpg')),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfilePage()),
+                    );
+                  },
+                ),
+                label: ''
+              )
+          ]),
+        ),
         backgroundColor: Colors.white,
         appBar: AppBar(
           elevation: 0.0,
@@ -390,13 +403,14 @@ class _PostState extends State<Post> {
             // setState(() {
             //   _hasBeenPressed5 = !_hasBeenPressed5;
             // })
-          },
-            icon: Icon(Icons.favorite_border_outlined, color: Colors.black, size: 30.0,),),
+            },
+            icon: Icon(Icons.favorite_border_outlined, color: Colors.black, size: 30.0,),
+          ),
           title: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              IconButton(onPressed: (){}, icon: Image.asset('assets/images/instagramcommenticon.png', width: 27.0, height: 27.0,)),
-              IconButton(onPressed: (){}, icon: Image.asset('assets/images/instagramshareicon.png', width: 27.0, height: 27.0,)),
+              IconButton(onPressed: (){}, icon: Image.asset('assets/images/instagramcommenticon.png', width: 25.0, height: 25.0,)),
+              IconButton(onPressed: (){}, icon: Image.asset('assets/images/instagramshareicon.png', width: 25.0, height: 25.0,)),
             ],
           ),
           trailing: IconButton(onPressed: (){}, icon: Icon(Icons.bookmark_border, color: Colors.black, size: 30.0,)),
